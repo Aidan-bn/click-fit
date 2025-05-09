@@ -1,6 +1,7 @@
-//const express = require('express');
+const express = require('express');
 const { response } = require('express');
-const router = require('../routes/routes')
+const router = require('../routes/routes');
+//const jsonData = document.getElementById('table');
 
 const getData = (req, res) => {
         fetch('http://numbersapi.com/1/30/date?json')
@@ -9,6 +10,7 @@ const getData = (req, res) => {
         )
         .then (data => {
             res.json(data);
+            console.log(data);
         })
         .catch(error => {
             console.error('Error fetching data:', error)

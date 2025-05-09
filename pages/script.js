@@ -1,9 +1,12 @@
 let currentImg = 0;
 const slides = document.querySelectorAll('.li-img-slide');
 const dragable = document.querySelector('.img-dragable');
+const apiItem = document.querySelector('.entry');
 const menu = document.querySelector('.menu');
 const overlay = document.querySelector('.overlay');
 const closeMenu = document.querySelector('.close');
+//xttp('GET, 'localhost:4000/api/', true)
+//import getData from ('../backend/controller/appController');
 
 const showImg = (index) => {
     slides.forEach((slide, i) => {
@@ -60,3 +63,21 @@ menu.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
+
+
+const getData = () => {
+
+    return fetch('http://localhost:4000/api/')
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        apiItem.innerHTML = `
+        <p>${data.text}</p>
+        <strong>${data.found}</strong>`
+    });
+}
+
+getData();
+
