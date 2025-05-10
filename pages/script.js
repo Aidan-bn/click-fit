@@ -65,19 +65,35 @@ closeMenu.addEventListener('click', () => {
 });
 
 
-const getData = () => {
+// const getData = () => {
 
-    return fetch('http://localhost:4000/api/')
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-        apiItem.innerHTML = `
-        <p>${data.text}</p>
-        <strong>${data.found}</strong>`
-    });
+//     return fetch('http://localhost:4000/api/')
+//     .then(response => {
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log(data);
+//         apiItem.innerHTML = `
+//         <p>${data.text}</p>
+//         <strong>${data.found}</strong>`
+//     });
+// }
+
+//getData();
+
+function loadData  ()  {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if(this.readyState === 4 && this.status === 200){
+            console.log(this.responseText);
+            const data = JSON.parse(this.responseText);
+            const text = data. text;
+            document.getElementById('entry').innerHTML = text;
+        }
+    };
+    xhttp.open("GET", "http://localhost:4000/api/", true);
+    xhttp.send();
 }
 
-getData();
+loadData();
 
