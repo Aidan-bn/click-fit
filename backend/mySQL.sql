@@ -11,11 +11,8 @@ CREATE TABLE users (
 -- //procedure(stored query)
 
 CREATE PROCEDURE addUser
+INSERT INTO users ( email, password, type) VALUES ("aidan@me.com", "pass123", "admin");
 AS
-INSERT INTO users (
-
-)
-
 GO;
 
 EXEC addUser;
