@@ -8,3 +8,14 @@ CREATE TABLE users (
     UNIQUE (email)
 ) ENGINE = innoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- //procedure(stored query)
+
+CREATE PROCEDURE addUser
+AS
+INSERT INTO users (
+
+)
+
+GO;
+
+EXEC addUser;
