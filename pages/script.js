@@ -83,9 +83,9 @@ function loadData  ()  {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if(this.readyState === 4 && this.status === 200){
-            console.log(this.responseText);
+            //console.log(this.responseText);
             const data = JSON.parse(this.responseText);
-            const text = data. text;
+            const text = data.text;
             document.getElementById('entry').innerHTML = text;
         }
     };
@@ -94,3 +94,24 @@ function loadData  ()  {
 }
 
 loadData();
+
+const uploadImage = async () => {
+
+const fileInput = document.getElementById('imgUpload');
+const file = fileInput.files[0];    
+
+if(file) {
+    const formData = new FormData();
+    formData.append('image', file);
+
+    try {
+        const response = await fetch('http://localhost:4000/image', {
+            method: 'POST',
+            body: formData
+        });
+    }
+        catch (error){
+            console.error('Netwowrk error', error);
+        }
+    }
+}

@@ -232,6 +232,25 @@ figcaption:hover {
     transition-duration: 300ms;
 }
 
+.upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload > button {
+    background-color: #2c2c5a;
+    color: #c2c2c2;
+    padding: 0.3rem 0.8rem;
+    margin: 1rem 0;
+    border: 0;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.upload > button:hover{
+    opacity: 0.7;
+}
 /*tablet media query for the header part*/
 @media  (min-width: 768px) and (max-width: 1024px) {
     .title > h1 {

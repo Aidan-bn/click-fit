@@ -15,5 +15,22 @@ const getData = (req, res) => {
             console.error('Error fetching data:', error)
         });
     }
+    
+//const upload = multer({ storage: storage }).single('image');
 
-module.exports = getData;
+const uploadImage = (req, res) => {
+    // res.json({
+    //     "msg": "image uploaded"
+    // });
+    upload(req, res, (error) => {
+        if(error){
+            return res.status(400).json({eror: error.message})
+        }
+        res.status(200).json({msg: "Image uploaded successfully"})
+    })
+}
+
+module.exports = {
+    getData, 
+    uploadImage
+};

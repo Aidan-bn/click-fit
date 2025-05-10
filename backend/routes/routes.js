@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const getData = require ( '../controller/appController');
+const {getData, uploadImage} = require ( '../controller/appController');
 
-router.get('/', getData)
+router.get('/', getData);
+router.post('/image', uploadImage);
 
 module.exports = router;
