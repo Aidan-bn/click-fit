@@ -5,8 +5,6 @@ const apiItem = document.querySelector('.entry');
 const menu = document.querySelector('.menu');
 const overlay = document.querySelector('.overlay');
 const closeMenu = document.querySelector('.close');
-//xttp('GET, 'localhost:4000/api/', true)
-//import getData from ('../backend/controller/appController');
 
 const showImg = (index) => {
     slides.forEach((slide, i) => {
@@ -96,4 +94,3 @@ function loadData  ()  {
 }
 
 loadData();
-
