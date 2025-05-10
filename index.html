@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="stylesheet" href="./pages/styles.css">
+    <title>click fits</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <img src="./images/logo.png" alt="logo" class="logo"/>
+            <div class="nav-div">
+                <ul class="nav-ul">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#men">Tools</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+                <img src="./images/menu-icon.png" alt="menu" class="menu" />
+            </div>
+        </nav>
+
+        <div class="overlay">
+            <ul class="nav-ul-overlay">
+                <li><a href="#">Home</a></li>
+                <li><a href="#men">Tools</a></li>
+                <li class="close">&#10006</li>
+            </ul>
+        </div>
+
+        <div class="title">
+            <h1>Sport Fits</h1>
+            <div class="header">
+                <p>Find the best of your sport fits</p>
+                <button class="btn-more">Explore More</button>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="men" class="display">
+
+        <h1>For Yoga</h1>
+        <div class="sides">
+            <p class="description">
+                Here are some tools for your workout
+                you can use today according to your 
+                health condition
+            </p>
+            <div class="img-slide">
+                <ul class="ul-img">
+                    <li class="li-img-slide active">
+                        <figure class="fig-slide">
+                            <img src="./images/assets/asset-four.png" alt="asset one" class="img-slider" />
+                            <figcaption>Hands fits</figcaption>
+                        </figure>
+                    </li>
+                    <li class="li-img-slide ">
+                        <figure class="fig-slide">
+                            <img src="./images/assets/asset-two.png" alt="asset one" class="img-slider"/>
+                            <figcaption>strech bisepts</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            <strong class="dragable-title">Drag Me </strong>
+            <div class="dragable ">                 
+                <img src="./images/assets/fit1.png" alt="arrow-down" class="img-dragable"/>
+            </div>
+            <div id="entry"  >
+                <!-- dynamically inserted -->
+            </div>
+            <div class="upload">
+                <input type="file" id="imgUpload" accept="image/*" />
+                <button onclick="uploadImage()">Upload</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        &copy; 2025
+    </footer>
+
+    <script src="./pages/script.js"></script>
+</body>
+</html>
